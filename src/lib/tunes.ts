@@ -27,7 +27,7 @@ export const tunes: Array<TuneType> = [
   {
     name: 'Apparition de l\'Église Éternelle',
     composer: 'Olivier Messiaen',
-    sheet: 'X: 1\nT: Heavy Shit\nC: Heavy Weight\n%%staves {(RH extra) (LH)}\nV:RH clef=treble\nV:LH clef=bass\nL: 1/8\nP: 142\nQ: "Très lent" 1/8=54\n[V: RH]\n!f! [^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,=C=G=c]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=A,D=Ad]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,CEce]2[=F,C=Fc=f]2|[^C,^F,^C^F^c]7 z|\n[^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,=C=G=c]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=A,D=Ad]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,CEce]2[=F,C=Fc=f]2|!ff! [^C,^F,^C^F^c]7 z|\n[V: LH]\nD,, E,,2 C,, C,,2 C,,|D,, E,,2 D,, D,,2 D,,|D,, E,,2 C,,2 E,,2|^F,, ^F,,2 ^F,, ^F,, ^F,,2 z|\nD,, E,,2 C,, C,,2 C,,|D,, E,,2 D,, D,,2 D,,|D,, E,,2 C,,2 E,,2|^F,, ^F,,2 ^F,, ^F,, ^F,,2 z|',
+    sheet: 'X: 1\nT: Heavy Shit\nC: Heavy Weight\n%%staves {(RH extra) (LH)}\nV:RH clef=treble\nV:LH clef=bass\nL: 1/8\nP: 142\nQ: "Très lent" 1/8=54\n[V: RH]\n!f! [^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,=C=G=c]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=A,D=Ad]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,CEce]2[=F,C=Fc=f]2|[^C,^F,^C^F^c]7 z|\n[^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,=C=G=c]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=A,D=Ad]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,CEce]2[=F,C=Fc=f]2|!ff! [^C,^F,^C^F^c]7 z|\n!f! [G,=C^Fd]2 [B,_DG_e] [=D=FBg]2 [B,_DGe] [C=D_A=f]4|[_D_E=A^f] [E^Fc_a]2|[=F,_B,=F_B=f_b]7 z|\n[V: LH]\nD,, E,,2 C,, C,,2 C,,|D,, E,,2 D,, D,,2 D,,|D,, E,,2 C,,2 E,,2|^F,, ^F,,2 ^F,, ^F,, ^F,,2 z|\nD,, E,,2 C,, C,,2 C,,|D,, E,,2 D,, D,,2 D,,|D,, E,,2 C,,2 E,,2|^F,, ^F,,2 ^F,, ^F,, ^F,,2 z|\n_E,2 =F, _A,2 F, ^F, F,2 F,|G, =A,2|_B,, _B,,2 _B,, _B,, _B,,2 z|',
     rightAnswer: 'MEDAL',
   },
 ];
