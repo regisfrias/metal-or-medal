@@ -24,4 +24,10 @@ export const tunes: Array<TuneType> = [
     sheet: 'X: 1\nT: Won\'t tell\nC: Anonymous for You\n%%staves {(RH extra) (LH)}\nV:RH clef=bass\nV:LH clef=bass\nL: 1/8\nP: 142\nQ: 1/4=160 "Allegro com brio."\n[V: RH]\nM: 4/4\n!pp! z [C,E,][C,E,] [C,E,][C,E,][C,E,][C,E,]|[C,E,][C,E,][C,E,][C,E,] [C,E,][C,E,][D,^F,][D,^F,]|([D,G,]3 B,1/2A,1/2 G,,) z z2|[K: clef=treble](d\'2 d\'1/2)c\'1/2b1/2a1/2 g2 z2|\n[V: LH]\nM: 4/4\nC,,[C,,G,,][C,,G,,] [C,,G,,][C,,G,,][C,,G,,][C,,G,,]|[C,,G,,][C,,G,,][C,,G,,][C,,G,,] [C,,G,,][C,,G,,][C,,A,,][C,,A,,]|[B,,,G,,][B,,,G,,][B,,,G,,][B,,,G,,] [B,,,G,,][B,,,G,,][B,,,G,,][B,,,G,,]|[B,,,G,,][B,,,G,,][B,,,G,,][B,,,G,,] [B,,,G,,][B,,,G,,][B,,,G,,][B,,,G,,]|',
     rightAnswer: 'MEDAL',
   },
+  {
+    name: 'Apparition de l\'Église Éternelle',
+    composer: 'Olivier Messiaen',
+    sheet: 'X: 1\nT: Heavy Shit\nC: Heavy Weight\n%%staves {(RH extra) (LH)}\nV:RH clef=treble\nV:LH clef=bass\nL: 1/8\nP: 142\nQ: "Très lent" 1/8=54\n[V: RH]\n!f! [^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,=C=G=c]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=A,D=Ad]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,CEce]2[=F,C=Fc=f]2|[^C,^F,^C^F^c]7 z|\n[^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,=C=G=c]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=A,D=Ad]4|[^G,^A,D=G^G] [^G,B,E^G^A]2 [=G,CEce]2[=F,C=Fc=f]2|!ff! [^C,^F,^C^F^c]7 z|\n[V: LH]\nD,, E,,2 C,, C,,2 C,,|D,, E,,2 D,, D,,2 D,,|D,, E,,2 C,,2 E,,2|^F,, ^F,,2 ^F,, ^F,, ^F,,2 z|\nD,, E,,2 C,, C,,2 C,,|D,, E,,2 D,, D,,2 D,,|D,, E,,2 C,,2 E,,2|^F,, ^F,,2 ^F,, ^F,, ^F,,2 z|',
+    rightAnswer: 'MEDAL',
+  },
 ];
