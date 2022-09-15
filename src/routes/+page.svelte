@@ -3,8 +3,10 @@
   import Sheet from '../lib/Sheet.svelte';
 	import '../app.css';
 
-  import { tunes } from '../lib/tunes'
-  let sheets = [...tunes]
+  import { tunes } from '../lib/tunes';
+	import { shuffle } from '../lib/utils';
+
+  let sheets = shuffle(tunes);
   let currentSheet = 0
 </script>
 
