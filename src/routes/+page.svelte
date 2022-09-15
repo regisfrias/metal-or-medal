@@ -1,6 +1,7 @@
 <script lang="ts">
   import Input from '../lib/Input.svelte';
   import Sheet from '../lib/Sheet.svelte';
+	import '../app.css';
 
   import { tunes } from '../lib/tunes'
   let sheets = [...tunes]
