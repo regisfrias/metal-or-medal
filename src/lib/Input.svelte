@@ -46,9 +46,9 @@
     <p><strong>{ sheets[currentSheet].name }</strong>,<br>by { sheets[currentSheet].composer }</p>
   {/if}
 
-  <div class="score">
+  <div class="score_wrapper">
     <h2>Your score</h2>
-    <p>{ score }</p>
+    <p class="score">{ score }</p>
   </div>
 </div>
 
@@ -63,7 +63,15 @@
     font-size: 3rem;
   }
 
-  .score {
+  .score_wrapper {
     border: 1px solid rgb(194, 194, 194);
   }
+
+  .score_wrapper h2 {
+    font-size: 1rem;
+  }
+
+	.score {
+		font-size: 4rem;
+	}
 </style>

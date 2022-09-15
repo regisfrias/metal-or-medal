@@ -23,7 +23,9 @@
 
     if (activateAudio) {
       activateAudio.addEventListener('click', activate);
+      activateAudio?.removeAttribute('disabled');
       function activate() {
+        activateAudio?.setAttribute('disabled', '');
         if (abcjs.synth.supportsAudio()) {
           var controlOptions = {
             displayRestart: true,
@@ -41,7 +43,7 @@
               options: {}
             })
             .then(function () {
-              synthControl.setTune(visualObj[0], true).then(function (response) {
+              synthControl.setTune(visualObj[0], true).then(function () {
                 const inlineAudio = document.querySelector('.abcjs-inline-audio');
                 if (inlineAudio) {
                   inlineAudio.classList.remove('disabled');
