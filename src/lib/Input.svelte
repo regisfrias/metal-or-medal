@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Sheet from "./Sheet.svelte";
   import type { TuneType } from "./tunes";
   export let sheets: Array<TuneType>;
   export let currentSheet: number;
@@ -27,19 +28,18 @@
 </script>
 
 <div class="input">
-  <p>currentSheet: {currentSheet}</p>
-
   {#if !done && currentSheet < sheets.length}
     <div class="buttons">
       <button on:click={() => placeAnswer('METAL')} disabled={didAnswer} aria-label="Vote for metal">🤘</button>
       <button on:click={() => placeAnswer('MEDAL')} disabled={didAnswer} aria-label="Vote for medal">🥇</button>
-      <button on:click={() => next()} disabled={!didAnswer} aria-label="Next">Next</button>
+      <button on:click={() => next()} disabled={!didAnswer} aria-label="Next">{sheets.length - 2 < currentSheet ? 'Finish' : 'Next'}</button>
     </div>
   {/if}
 
   {#if didAnswer}
     <p>{answerRight ? 'Very good!': 'You have been fooled!'}</p>
-    <p>{ sheets[currentSheet].name }, by { sheets[currentSheet].composer }</p>
+		<p>This piece is:</p>
+    <p><strong>{ sheets[currentSheet].name }</strong>,<br>by { sheets[currentSheet].composer }</p>
   {/if}
 
   <h2>Your score</h2>
