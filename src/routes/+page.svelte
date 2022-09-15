@@ -9,5 +9,8 @@
 </script>
 
 <h1>Metal or Medal</h1>
+
+<p>Is it metal? Is it not? Decide if the sheet below represents a piano reduction of a classical masterpiece or a transcription from hell.</p>
+
 <Sheet sheet={sheets[currentSheet]} />
 <Input bind:sheets={sheets} bind:currentSheet={currentSheet} />

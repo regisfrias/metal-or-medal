@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount, beforeUpdate, afterUpdate } from 'svelte';
+  import { beforeUpdate, afterUpdate } from 'svelte';
   import abcjs from 'abcjs';
   import 'abcjs/abcjs-audio.css';
   import type { tuneType } from './tunes';
@@ -8,9 +8,8 @@
   function renderSheet(tune: string) {
     const visualOptions = { responsive: 'resize' } as abcjs.AbcVisualParams;
     var visualObj = abcjs.renderAbc('paper', tune, visualOptions);
-  
     const activateAudio = document.querySelector('.activate-audio');
-  
+
     if (activateAudio) {
       activateAudio.addEventListener('click', activate);
       function activate() {
@@ -131,10 +130,6 @@
     }
   }
 
-  onMount(() => {
-    renderSheet(sheet.sheet);
-  });
-  
   beforeUpdate(() => {
     renderSheet(sheet.sheet);
   });
