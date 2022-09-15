@@ -6,8 +6,19 @@
   export let sheet: TuneType;
 
   function renderSheet(tune: string) {
-    const visualOptions = { responsive: 'resize' } as abcjs.AbcVisualParams;
-    var visualObj = abcjs.renderAbc('paper', tune, visualOptions);
+    const paperSize = window.innerWidth - 100 <= 750 ? window.innerWidth - 100 : 750;
+
+    var visualObj = abcjs.renderAbc('paper', tune, {
+      staffwidth: paperSize,
+      viewportVertical: true,
+      scale: 0.75,
+      wrap: {
+        preferredMeasuresPerLine: 4,
+        minSpacing: 1,
+        maxSpacing: 2.5,
+        lastLineLimit: 3,
+      }
+    });
     const activateAudio = document.querySelector('.activate-audio');
 
     if (activateAudio) {
@@ -59,6 +70,10 @@
 </div>
 
 <style>
+  #paper {
+    margin: auto;
+    text-align: center;
+  }
   .sheet_wrapper {
     width: 100%;
   }

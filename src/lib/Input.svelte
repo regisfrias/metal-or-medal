@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TuneType } from "./tunes";
+  import type { TuneType } from "./tunes";
   export let sheets: Array<TuneType>;
   export let currentSheet: number;
 
@@ -26,7 +26,7 @@
   }
 </script>
 
-<div>
+<div class="input">
   <p>currentSheet: {currentSheet}</p>
 
   {#if !done && currentSheet < sheets.length}
@@ -38,10 +38,18 @@
   {/if}
 
   {#if didAnswer}
-		<p>{answerRight ? 'Very good!': 'You have been fooled!'}</p>
-		<p>{ sheets[currentSheet].name }, by { sheets[currentSheet].composer }</p>
+    <p>{answerRight ? 'Very good!': 'You have been fooled!'}</p>
+    <p>{ sheets[currentSheet].name }, by { sheets[currentSheet].composer }</p>
   {/if}
 
   <h2>Your score</h2>
   <p>{ score }</p>
 </div>
+
+<style>
+  .input {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+  }
+</style>
