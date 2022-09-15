@@ -1,8 +1,6 @@
 <script lang="ts">
-  export let sheets: Array<{
-    name: string,
-    rightAnswer: string,
-  }>;
+	import type { TuneType } from "./tunes";
+  export let sheets: Array<TuneType>;
   export let currentSheet: number;
 
   let didAnswer = false;
@@ -40,7 +38,8 @@
   {/if}
 
   {#if didAnswer}
-    <p>{answerRight ? 'Very good!': 'You have been fooled!'}</p>
+		<p>{answerRight ? 'Very good!': 'You have been fooled!'}</p>
+		<p>{ sheets[currentSheet].name }, by { sheets[currentSheet].composer }</p>
   {/if}
 
   <h2>Your score</h2>

@@ -2,8 +2,8 @@
   import { beforeUpdate, afterUpdate } from 'svelte';
   import abcjs from 'abcjs';
   import 'abcjs/abcjs-audio.css';
-  import type { tuneType } from './tunes';
-  export let sheet: tuneType;
+  import type { TuneType } from './tunes';
+  export let sheet: TuneType;
 
   function renderSheet(tune: string) {
     const visualOptions = { responsive: 'resize' } as abcjs.AbcVisualParams;
