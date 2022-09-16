@@ -62,14 +62,6 @@
     }
   }
 
-  onMount(() => {
-    const activateAudioBtn: HTMLButtonElement | null = document.querySelector('.activate-audio');
-    if (activateAudioBtn) {
-      activateAudioBtn.addEventListener('click', enableAudio);
-      activateAudioBtn.removeAttribute('disabled');
-    }
-  });
-  
   afterUpdate(() => {
     loadAudio();
   });
@@ -78,7 +70,7 @@
 <div class="sheet_wrapper">
   <div id="paper" />
   <div id="audio" />
-  <button class="activate-audio">Activate Audio</button>
+  <button class="activate-audio" on:click={enableAudio}>Activate Audio</button>
 </div>
 
 <style>
