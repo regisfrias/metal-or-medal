@@ -17,8 +17,8 @@
 			if (!done) {
 				score++;
 			}
-			icon = sheets[currentSheet].rightAnswer === 'METAL' ? 'metal.png' : 'medal.png';
     }
+		icon = sheets[currentSheet].rightAnswer === 'METAL' ? 'metal.png' : 'medal.png';
   }
 
   function next() {
