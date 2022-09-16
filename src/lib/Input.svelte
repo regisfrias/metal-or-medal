@@ -37,17 +37,15 @@
 </svelte:head>
 
 <div class="input">
-  {#if !done && currentSheet < sheets.length}
+  {#if !done && currentSheet < sheets.length && currentSheet < sheets.length - 1}
     <div class="buttons">
-      <p>
-        <button class="choice" on:click={() => submitAnswer('METAL')} disabled={didAnswer} aria-label="Vote for metal">🤘</button>
-        <button class="choice" on:click={() => submitAnswer('MEDAL')} disabled={didAnswer} aria-label="Vote for medal">🥇</button>
-      </p>
-			{#if currentSheet < sheets.length - 1}
-				<p>
-					<button on:click={() => next()} disabled={!didAnswer} aria-label="Next">Next</button>
-				</p>
-			{/if}
+			<p>
+				<button class="choice" on:click={() => submitAnswer('METAL')} disabled={didAnswer} aria-label="Vote for metal">🤘</button>
+				<button class="choice" on:click={() => submitAnswer('MEDAL')} disabled={didAnswer} aria-label="Vote for medal">🥇</button>
+			</p>
+			<p>
+				<button on:click={() => next()} disabled={!didAnswer} aria-label="Next">Next</button>
+			</p>
     </div>
   {/if}
 
