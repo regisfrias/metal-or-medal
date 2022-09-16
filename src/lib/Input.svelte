@@ -1,24 +1,29 @@
 <script lang="ts">
-  import Sheet from "./Sheet.svelte";
   import type { TuneType } from "./tunes";
   export let sheets: Array<TuneType>;
   export let currentSheet: number;
+	const defaultFavicon = 'favicon.png';
 
   let didAnswer = false;
   let answerRight = false;
   let done = false;
   let score = 0;
+	let icon = defaultFavicon;
 
   function placeAnswer(answer: string) {
     didAnswer = true;
     answerRight = answer === sheets[currentSheet].rightAnswer;
-    if (answerRight && !done) {
-      score++;
+    if (answerRight) {
+			if (!done) {
+				score++;
+			}
+			icon = sheets[currentSheet].rightAnswer === 'METAL' ? 'metal.png' : 'medal.png';
     }
   }
 
   function next() {
     didAnswer = false;
+		icon = defaultFavicon;
     if (currentSheet < sheets.length - 1) {
       currentSheet++;
     } else {
@@ -26,6 +31,10 @@
     }
   }
 </script>
+
+<svelte:head>
+	<link rel="shortcut icon" href={icon} type="image/x-icon">
+</svelte:head>
 
 <div class="input">
   {#if !done && currentSheet < sheets.length}
