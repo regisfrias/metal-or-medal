@@ -12,7 +12,7 @@
 
 <header>
   <h1>Metal or Medal</h1>
-  <p>Is it metal? Is it not? Decide if the sheet below represents a piano reduction of a classical masterpiece or a transcription from hell.</p>
+  <p>Is it metal? Is it not? Decide if the sheet below represents a piano reduction of a western classical music pantheon medal-winning masterpiece🥇 or a transcription from hell🤘.</p>
 </header>
 
 <Sheet sheet={sheets[currentSheet]} />

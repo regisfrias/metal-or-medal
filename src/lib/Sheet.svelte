@@ -1,14 +1,15 @@
 <script lang="ts">
-  import { beforeUpdate, afterUpdate } from 'svelte';
+  import { onMount, afterUpdate } from 'svelte';
   import abcjs from 'abcjs';
   import 'abcjs/abcjs-audio.css';
   import type { TuneType } from './tunes';
   export let sheet: TuneType;
 
-  function renderSheet(tune: string) {
-    const paperSize = window.innerWidth - 100 <= 750 ? window.innerWidth - 100 : 750;
+  let synthControl: abcjs.SynthObjectController;
 
-    var visualObj = abcjs.renderAbc('paper', tune, {
+  const setupVisualObj = (): abcjs.TuneObject => {
+    const paperSize = window.innerWidth - 100 <= 750 ? window.innerWidth - 100 : 750;
+    const visualObjs = abcjs.renderAbc('paper', sheet.sheet, {
       staffwidth: paperSize,
       viewportVertical: true,
       scale: 0.75,
@@ -19,49 +20,58 @@
         lastLineLimit: 3,
       }
     });
-    const activateAudio = document.querySelector('.activate-audio');
 
-    if (activateAudio) {
-      activateAudio.addEventListener('click', activate);
-      activateAudio?.removeAttribute('disabled');
-      function activate() {
-        activateAudio?.setAttribute('disabled', '');
-        if (abcjs.synth.supportsAudio()) {
-          var controlOptions = {
-            displayRestart: true,
-            displayPlay: true,
-            displayProgress: true,
-            displayClock: true
-          };
-          var synthControl = new abcjs.synth.SynthController();
-          synthControl.load('#audio', null, controlOptions);
-          synthControl.disable(true);
-          var midiBuffer = new abcjs.synth.CreateSynth();
-          midiBuffer
-            .init({
-              visualObj: visualObj[0],
-              options: {}
-            })
-            .then(function () {
-              synthControl.setTune(visualObj[0], true).then(function () {
-                const inlineAudio = document.querySelector('.abcjs-inline-audio');
-                if (inlineAudio) {
-                  inlineAudio.classList.remove('disabled');
-                }
-              });
-            });
-        } else {
-          console.log('audio is not supported on this browser');
-        }
-      }
+    return visualObjs[0];
+  }
+
+  function loadAudio() {
+    const visualObj = setupVisualObj();
+    const controlOptions = {
+      displayRestart: true,
+      displayPlay: true,
+      displayProgress: true,
+      displayClock: true
+    };
+
+    if (synthControl) {
+      synthControl.load('#audio', null, controlOptions);
+      synthControl.disable(true);
+      const midiBuffer = new abcjs.synth.CreateSynth();
+      midiBuffer
+        .init({
+          visualObj,
+          options: {}
+        })
+        .then(function () {
+          synthControl.setTune(visualObj, true).then(function () {
+            document.querySelector('.abcjs-inline-audio')?.classList.remove('disabled');
+          });
+        });
     }
   }
 
-  beforeUpdate(() => {
-    renderSheet(sheet.sheet);
+  function enableAudio(evt: MouseEvent) {
+    const activateAudioBtn = (evt.target as HTMLButtonElement);
+    activateAudioBtn.remove();
+
+    if (abcjs.synth.supportsAudio()) {
+      synthControl = new abcjs.synth.SynthController();
+      loadAudio();
+    } else {
+      console.log('audio is not supported on this browser');
+    }
+  }
+
+  onMount(() => {
+    const activateAudioBtn: HTMLButtonElement | null = document.querySelector('.activate-audio');
+    if (activateAudioBtn) {
+      activateAudioBtn.addEventListener('click', enableAudio);
+      activateAudioBtn.removeAttribute('disabled');
+    }
   });
   
   afterUpdate(() => {
+    loadAudio();
   });
 </script>
 
