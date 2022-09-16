@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount, afterUpdate } from 'svelte';
+  import { afterUpdate } from 'svelte';
   import abcjs from 'abcjs';
   import 'abcjs/abcjs-audio.css';
   import type { TuneType } from './tunes';
