@@ -8,14 +8,15 @@
   let synthControl: abcjs.SynthObjectController;
 
   const setupVisualObj = (): abcjs.TuneObject => {
-    const paperSize = window.innerWidth - 100 <= 750 ? window.innerWidth - 100 : 750;
+    const isMobile = window.innerWidth - 100 <= 600;
+    const paperSize = isMobile ? window.innerWidth - 100 : 600;
     const visualObjs = abcjs.renderAbc('paper', sheet.sheet, {
       staffwidth: paperSize,
       viewportVertical: true,
-      scale: 0.75,
+      scale: isMobile ? 0.6 : 0.9,
       wrap: {
         preferredMeasuresPerLine: 4,
-        minSpacing: 1,
+        minSpacing: isMobile ? 1 : 1.5,
         maxSpacing: 2.5,
         lastLineLimit: 3,
       }
@@ -64,6 +65,8 @@
 
   afterUpdate(() => loadAudio());
 </script>
+
+<svelte:window on:resize={setupVisualObj} />
 
 <div class="sheet_wrapper">
   <div id="paper" />
