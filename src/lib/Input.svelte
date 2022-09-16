@@ -37,7 +37,7 @@
 </svelte:head>
 
 <div class="input">
-  {#if !done && currentSheet < sheets.length && currentSheet < sheets.length - 1}
+  {#if !done && currentSheet < sheets.length}
     <div class="buttons">
 			<p>
 				<button class="choice" on:click={() => submitAnswer('METAL')} disabled={didAnswer} aria-label="Vote for metal">🤘</button>
