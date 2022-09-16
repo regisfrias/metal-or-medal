@@ -10,7 +10,7 @@
   let score = 0;
 	let icon = defaultFavicon;
 
-  function placeAnswer(answer: string) {
+  function submitAnswer(answer: string) {
     didAnswer = true;
     answerRight = answer === sheets[currentSheet].rightAnswer;
     if (answerRight) {
@@ -40,8 +40,8 @@
   {#if !done && currentSheet < sheets.length}
     <div class="buttons">
       <p>
-        <button class="choice" on:click={() => placeAnswer('METAL')} disabled={didAnswer} aria-label="Vote for metal">🤘</button>
-        <button class="choice" on:click={() => placeAnswer('MEDAL')} disabled={didAnswer} aria-label="Vote for medal">🥇</button>
+        <button class="choice" on:click={() => submitAnswer('METAL')} disabled={didAnswer} aria-label="Vote for metal">🤘</button>
+        <button class="choice" on:click={() => submitAnswer('MEDAL')} disabled={didAnswer} aria-label="Vote for medal">🥇</button>
       </p>
       <p>
         <button on:click={() => next()} disabled={!didAnswer} aria-label="Next">{sheets.length - 2 < currentSheet ? 'Finish' : 'Next'}</button>
