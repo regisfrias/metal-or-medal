@@ -62,9 +62,7 @@
     }
   }
 
-  afterUpdate(() => {
-    loadAudio();
-  });
+  afterUpdate(() => loadAudio());
 </script>
 
 <div class="sheet_wrapper">
@@ -81,10 +79,4 @@
   .sheet_wrapper {
     width: 100%;
   }
-  /* .abcjs-highlight {
-    fill: #0a9ecc;
-  }
-  .abcjs-cursor {
-    stroke: red;
-  } */
 </style>
