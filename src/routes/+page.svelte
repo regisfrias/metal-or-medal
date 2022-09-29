@@ -25,7 +25,8 @@
 <style>
   header {
     max-width: 400px;
-    margin: auto;
+    margin: auto 40px;
+    padding: 1px;
   }
 
   h1 {
