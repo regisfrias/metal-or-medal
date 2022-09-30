@@ -66,13 +66,9 @@
 
 <style>
   .input {
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
-    color: white;
+    border-top: 1px solid rgb(55, 55, 55);
+    max-width: 600px;
+    margin: auto;
   }
 
   .input .buttons {
@@ -82,29 +78,12 @@
 
   .input .buttons .choice {
     font-size: 3rem;
-    background-color: black;
+    background-color: transparent;
     border: 0;
     cursor: pointer;
   }
 
-  .score_wrapper {
-  }
-
-  .score_wrapper h2 {
-    font-size: 1rem;
-  }
-
-	.score {
-	}
-
   .feedback {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0,0,0,0.9);
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;

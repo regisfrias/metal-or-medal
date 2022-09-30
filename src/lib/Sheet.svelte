@@ -89,22 +89,37 @@
   });
 </script>
 
-<svelte:window on:resize={setupVisualObj} />
+<svelte:window on:resize={() => setupVisualObj(sheets[currentSheet])} />
 
-<div class="sheet_wrapper">
-  <div id="paper" />
+<div id="paper" />
+<footer class="footer">
   <div id="audio" />
   <button class="activate-audio" on:click={enableAudio}>Activate Audio</button>
-</div>
+  <Input bind:sheets={sheets} bind:currentSheet={currentSheet} />
+</footer>
 
-<Input bind:sheets={sheets} bind:currentSheet={currentSheet} />
 
 <style>
   #paper {
     margin: auto;
     text-align: center;
   }
-  .sheet_wrapper {
-    width: 100%;
+
+  .activate-audio {
+    border: 0;
+    background-color: white;
+    color: black;
+    padding: 0.25rem 0.75rem;
+    margin: 0.75rem auto;
+    display: block;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: white;
   }
 </style>

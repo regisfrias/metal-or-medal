@@ -17,7 +17,7 @@
 <style>
   header {
     max-width: 400px;
-    margin: auto 40px;
+    margin: auto;
     padding: 1px;
   }
 
