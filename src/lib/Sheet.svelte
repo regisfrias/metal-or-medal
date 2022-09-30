@@ -106,11 +106,9 @@
   }
 
   .activate-audio {
-    border: 0;
-    background-color: white;
-    color: black;
     padding: 0.25rem 0.75rem;
-    margin: 0.75rem auto;
+    margin: 0.5rem auto;
+    border: 0;
     display: block;
   }
 
