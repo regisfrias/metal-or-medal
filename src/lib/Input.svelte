@@ -37,15 +37,23 @@
 </svelte:head>
 
 <div class="input">
-  {#if !done && currentSheet < sheets.length}
-    <div class="buttons">
-      <button class="choice" on:click={() => submitAnswer('METAL')} disabled={didAnswer} aria-label="Vote for metal">🤘</button>
-      <div class="score_wrapper">
-        <p class="score">Your score: { score }</p>
-      </div>
-      <button class="choice" on:click={() => submitAnswer('MEDAL')} disabled={didAnswer} aria-label="Vote for medal">🥇</button>
+  <div class="buttons">
+    {#if !done}
+      {#if currentSheet < sheets.length}
+        <button class="choice" on:click={() => submitAnswer('METAL')} disabled={didAnswer} aria-label="Vote for metal">🤘</button>
+        <div class="score_wrapper">
+          <p class="score">Your score: { score } / {sheets.length}</p>
+        </div>
+        <button class="choice" on:click={() => submitAnswer('MEDAL')} disabled={didAnswer} aria-label="Vote for medal">🥇</button>
+      {/if}
+    {:else}
+    <div></div>
+    <div class="score_wrapper">
+      <p class="score">Final score: { score } / {sheets.length}</p>
     </div>
-  {/if}
+    <div></div>
+    {/if}
+  </div>
 
 </div>
 
@@ -98,5 +106,9 @@
     border: 0;
     background-color: white;
     padding: 0.5rem 2rem;
+  }
+
+  .score_wrapper {
+    text-align: center;
   }
 </style>
