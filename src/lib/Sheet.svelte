@@ -25,6 +25,29 @@
     return visualObjs[0];
   }
 
+  const cursorControl: abcjs.CursorControl = {
+    onStart: function () {
+      console.log('start');
+    },
+    onEvent: function (ev) {
+      if (ev && ev.elements) {
+        ev.elements.map( noteGroup => {
+          noteGroup.map( note => {
+            note.classList.add('abcjs-highlight');
+          })
+        })
+
+        // // Select the currently selected notes.
+        // for (var i = 0; i < ev.elements.length; i++) {
+        //   var note = ev.elements[i];
+        //   for (var j = 0; j < note.length; j++) {
+        //     note[j].classList.add('abcjs-highlight');
+        //   }
+        // }
+      }
+    }
+  }
+
   function loadAudio() {
     const visualObj = setupVisualObj();
     const controlOptions = {
@@ -36,6 +59,7 @@
 
     if (synthControl) {
       synthControl.load('#audio', null, controlOptions);
+      // synthControl.load('#audio', cursorControl, controlOptions);
       synthControl.disable(true);
       const midiBuffer = new abcjs.synth.CreateSynth();
       midiBuffer
