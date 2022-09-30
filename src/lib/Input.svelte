@@ -56,13 +56,11 @@
     <p>This piece is:</p>
     <p><strong>{ sheets[currentSheet].name }</strong><br>by { sheets[currentSheet].composer }</p>
     <p>
-      <button on:click={() => next()} disabled={!didAnswer} aria-label="Next">Next</button>
+      <button class="feedback-btn" on:click={() => next()} disabled={!didAnswer} aria-label="Next">Next</button>
     </p>
   </div>
 </div>
 {/if}
-
-
 
 <style>
   .input {
@@ -88,5 +86,17 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .feedback-btn {
+    border: 0;
+    background-color: white;
+    padding: 0.5rem 2rem;
   }
 </style>
