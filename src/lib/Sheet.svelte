@@ -3,11 +3,16 @@
   import abcjs from 'abcjs';
   import 'abcjs/abcjs-audio.css';
   import type { TuneType } from './tunes';
-  export let sheet: TuneType;
+  import Input from '../lib/Input.svelte';
 
+  import { tunes } from '../lib/tunes';
+  import { shuffle } from '../lib/utils';
+
+  let sheets = shuffle(tunes);
+  let currentSheet = 0
   let synthControl: abcjs.SynthObjectController;
 
-  const setupVisualObj = (): abcjs.TuneObject => {
+  const setupVisualObj = (sheet: TuneType): abcjs.TuneObject => {
     const isMobile = window.innerWidth - 100 <= 600;
     const paperSize = isMobile ? window.innerWidth - 100 : 600;
     const visualObjs = abcjs.renderAbc('paper', sheet.sheet, {
@@ -40,8 +45,8 @@
   //   }
   // }
 
-  function loadAudio() {
-    const visualObj = setupVisualObj();
+  function loadAudio(sheet: TuneType) {
+    const visualObj = setupVisualObj(sheet);
     const controlOptions = {
       displayRestart: true,
       displayPlay: true,
@@ -73,13 +78,15 @@
 
     if (abcjs.synth.supportsAudio()) {
       synthControl = new abcjs.synth.SynthController();
-      loadAudio();
+      loadAudio(sheets[currentSheet]);
     } else {
       console.log('audio is not supported on this browser');
     }
   }
 
-  afterUpdate(() => loadAudio());
+  afterUpdate(() => {
+    loadAudio(sheets[currentSheet])
+  });
 </script>
 
 <svelte:window on:resize={setupVisualObj} />
@@ -89,6 +96,8 @@
   <div id="audio" />
   <button class="activate-audio" on:click={enableAudio}>Activate Audio</button>
 </div>
+
+<Input bind:sheets={sheets} bind:currentSheet={currentSheet} />
 
 <style>
   #paper {
