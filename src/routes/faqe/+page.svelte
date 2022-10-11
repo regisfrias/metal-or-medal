@@ -40,8 +40,16 @@
 
   footer {
     border-top: 1px solid lightgray;
-    margin-top: 100px;
-    padding-top: 30px;
+    background-color: black;
+    padding: 10px 0;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  footer a {
+    color: white;
   }
 </style>
