@@ -12,17 +12,17 @@
 
 <dl>
   <dt><dfn>What's with the horrific piano?</dfn></dt>
-  <dd>The point here is to see if you are able to recognize a music genre based solely on the notes. In the cases presented here the arrangement is the key difference between the two. The piano sound is the equivalent of putting a mask to the singer whose identity you want to find out. Besides the songs are generated in real time, so they are as only as pretty as a player piano can do.</dd>
+  <dd>The point here is to see if you are able to recognize a music genre based solely on the notes. In the cases presented here the arrangement is the key difference between the two. The piano sound is the equivalent of putting a mask on the singer about whose identity you want to find out. Besides the songs are generated in real time, so they are as only as pretty as a player piano can do.</dd>
 
   <dt><dfn>Why would someone create such a silly game?</dfn></dt>
-  <dd>I like metal and I like classical music. Some people don't understand how these two facts can be possible at the same time. This silly game is here to show them how.</dd>
+  <dd>I like metal and I like (contemporary) classical music. Some people don't understand how these two facts can be possible at the same time. This silly game is here to show them how.</dd>
 
   <dt><dfn>Who would create such a silly game?</dfn></dt>
   <dd><a href="https://regisfrias.com">Me</a></dd>
 </dl>
 
 <footer>
-  <a href="/">← Home</a>
+  <a href="/">← Back to the game</a>
 </footer>
 
 <style>
