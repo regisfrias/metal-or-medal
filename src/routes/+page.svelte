@@ -10,6 +10,7 @@
 <header>
   <h1>Metal or Medal</h1>
   <p>Is it metal? Is it not? Decide if the sheet below represents a piano reduction of a western classical music pantheon medal-winning masterpiece or a transcription from hell.</p>
+  <p>Wondering what this is? Read the <a href="/faqe">Faqe</a>.</p>
 </header>
 
 <Sheet />
