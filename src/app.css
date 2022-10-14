@@ -23,6 +23,12 @@ a {
   margin: 0 var(--padding);
 }
 
+.external_link:after {
+  content: "⤤";
+  border-radius: 100%;
+  margin-left: 0.25rem;
+}
+
 @media screen and (min-width: 690px) {
   .wrapper {
     margin: auto auto;

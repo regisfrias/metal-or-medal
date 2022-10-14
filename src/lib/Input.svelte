@@ -62,7 +62,10 @@
   <div>
     <p>{answerRight ? 'Very good!': 'You have been fooled!'}</p>
     <p>This piece is:</p>
-    <p><strong>{ sheets[currentSheet].name }</strong><br>by { sheets[currentSheet].composer }</p>
+    <p>
+      <strong>
+        <a href="{sheets[currentSheet].link}" target="_blank" class="external_link">{ sheets[currentSheet].name }</a>
+      </strong><br>by { sheets[currentSheet].composer }</p>
     <p>
       <button class="feedback-btn" on:click={() => next()} disabled={!didAnswer} aria-label="Next">Next</button>
     </p>
