@@ -42,4 +42,11 @@ export const tunes: Array<TuneType> = [
     rightAnswer: 'METAL',
     link: 'https://death.bandcamp.com/track/the-philosopher-5'
   },
+  {
+    name: 'Heartwork',
+    composer: 'Carcass',
+    sheet: 'X: 1\nT: Some Heart\nC: Some Body\n%%staves {(RH extra) (LH)}\nK: Emin\nM: 2/2\nV:RH clef=treble\nV:LH clef=bass\nL: 1/8\nQ: "Andante moderato" 1/2=92\n[V: RH]\n  [E,G,]2 [B,D]2 [FA]2 [GB]2|[Ac]2 [GB]2 [FA]2 [GB]2|[D,F,DF]8|[B,,D,B,D]4 [^D,F,^DF]4|\n  [E,G,]2 [B,D]2 [FA]2 [GB]2|[Ac]2 [GB]2 ([FA]1/2[GB]1/2[FA]) [EG]2|[F,A,FA]8|[C,E,CE]4 [^D,F,^DF]4|: EGB(^c dc)BE|^DGB(^c dc)BG|\n  DAdg (f1/2g1/2f)dA|^C^G,E,^C, E,^G,^C^D:|\n[V: LH]\n  (E,,8|E,,8)|D,,8|B,,,4^D,,4|\n  E,,2 B,,2 F,2 G,2|A,2 G,2 (F,1/2G,1/2F,) E,2|F,,8|C,,4^D,,4|:[E,,E,]8|[^D,,^D,]8|\n  [=D,,=D,]8|[^C,,^C,]8:|',
+    rightAnswer: 'METAL',
+    link: 'https://carcass.bandcamp.com/track/heartwork'
+  },
 ];
