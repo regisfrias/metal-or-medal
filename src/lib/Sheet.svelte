@@ -96,7 +96,8 @@
   <div id="paper" />
 {:else}
   <div class="replay">
-    <button on:click={() => window.location.reload()}>Play again</button>
+    <p class="">Game Over!</p>
+    <button on:click={() => window.location.reload()}>Play again ↺</button>
   </div>
 {/if}
 
@@ -116,6 +117,8 @@
 
   .replay {
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .activate-audio {

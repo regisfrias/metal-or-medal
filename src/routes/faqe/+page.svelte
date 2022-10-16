@@ -36,6 +36,7 @@
     border-top: 1px solid lightgray;
     margin-top: 50px;
     padding-top: 20px;
+    margin-bottom: 100px;
   }
   dt {
     padding-top: 30px;

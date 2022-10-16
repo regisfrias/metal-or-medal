@@ -22,16 +22,32 @@ a {
 .wrapper {
   max-width: var(--max-width);
   margin: 0 var(--padding);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .external_link:after {
   content: "⤤";
   border-radius: 100%;
   margin-left: 0.25rem;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  background-color: white;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
 }
 
 @media screen and (min-width: 690px) {

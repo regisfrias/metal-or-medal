@@ -19,7 +19,9 @@
     <p>Is it metal? Is it not? Decide if the music sheet you see represents a piano reduction of a western classical music pantheon medal-winning masterpiece or a transcription from hell.</p>
     <p>Wondering what this is? Read the <a href="/faqe">Faqe</a>.</p>
 
-    <button class="play" on:click={goPlay}>Play ></button>
+    <p class="play">
+      <button on:click={goPlay}>Play ▶</button>
+    </p>
   </div>
   {:else}
   <Sheet />
@@ -30,6 +32,10 @@
     max-width: 400px;
     margin: auto;
     padding: 1px;
+  }
+
+  .play {
+    text-align: center;
   }
 
   h1 {
