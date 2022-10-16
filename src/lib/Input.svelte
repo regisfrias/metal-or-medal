@@ -2,11 +2,11 @@
   import type { TuneType } from "./tunes";
   export let sheets: Array<TuneType>;
   export let currentSheet: number;
+  export let done = false;
 	const defaultFavicon = 'favicon.png';
 
   let didAnswer = false;
   let answerRight = false;
-  let done = false;
   let score = 0;
 	let icon = defaultFavicon;
 

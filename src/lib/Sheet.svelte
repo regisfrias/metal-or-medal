@@ -7,6 +7,7 @@
 
   import { tunes } from '../lib/tunes';
   import { shuffle } from '../lib/utils';
+  let done = false;
 
   let sheets = shuffle(tunes);
   let currentSheet = 0
@@ -91,11 +92,18 @@
 
 <svelte:window on:resize={() => setupVisualObj(sheets[currentSheet])} />
 
-<div id="paper" />
+{#if !done}
+  <div id="paper" />
+{:else}
+  <div class="replay">
+    <button on:click={() => window.location.reload()}>Play again</button>
+  </div>
+{/if}
+
 <footer class="footer">
   <div id="audio" />
   <button class="activate-audio" on:click={enableAudio}>Activate Audio</button>
-  <Input bind:sheets={sheets} bind:currentSheet={currentSheet} />
+  <Input bind:sheets={sheets} bind:currentSheet={currentSheet} bind:done={done} />
 </footer>
 
 
@@ -103,6 +111,11 @@
   #paper {
     margin: auto;
     text-align: center;
+    padding-bottom: 150px;
+  }
+
+  .replay {
+    display: flex;
   }
 
   .activate-audio {
