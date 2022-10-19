@@ -60,11 +60,13 @@
 {#if didAnswer}
 <div class="modal">
   <div class="modal-card">
-    {#if answerRight}
+    <div class="modal-card-header {answerRight ? 'success' : 'error'}">
+      {#if answerRight}
       <p class="success text-lg">Very good!</p>
-    {:else}
+      {:else}
       <p class="failure text-lg">You have been fooled!</p>
-    {/if}
+      {/if}
+    </div>
 
     <p>This piece is:</p>
     <p>
@@ -72,7 +74,7 @@
         <a href="{sheets[currentSheet].link}" target="_blank" class="external_link">{ sheets[currentSheet].name }</a>
       </strong><br>by { sheets[currentSheet].composer }</p>
     <p>
-      <button on:click={() => next()} disabled={!didAnswer} aria-label="Next">Next</button>
+      <button class="button--volume" on:click={() => next()} disabled={!didAnswer} aria-label="Next">Next</button>
     </p>
   </div>
 </div>
@@ -83,14 +85,6 @@
     border-top: 1px solid var(--light-gray);
     max-width: 600px;
     margin: auto;
-  }
-
-  .success {
-    color: #60df60;
-  }
-
-  .failure {
-    color: #de4f4f;
   }
 
   .input .buttons {

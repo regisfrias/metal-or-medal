@@ -8,8 +8,12 @@
   --salmon-dark: #d14f56;
   --salmon-darker: #aa3c41;
   --light-gray: #f2eff8;
+  --blue: #34c8de;
+  --blue-dark: #00a9dd;
+  --violet: #7c4b8e;
   --border-radius-sm: 10px;
   --border-radius-lg: 35px;
+  --fast: 0.25s;
 }
 
 html, body {
@@ -25,7 +29,7 @@ body {
 }
 
 a {
-  color: rgb(70, 140, 225);
+  color: var(--blue-dark);
 }
 
 .wrapper {
@@ -39,7 +43,7 @@ a {
 }
 
 .text-lg {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -73,7 +77,7 @@ button {
   font-size: 1.2rem;
   color: var(--white);
   text-transform: uppercase;
-  transition: background-color 0.25s, color 0.25s;
+  transition: background-color var(--fast), color var(--fast);
 }
 
 .button--volume:hover {
@@ -101,12 +105,57 @@ button {
 
 .modal-card {
   background-color: var(--white);
+  width: 300px;
+  overflow: hidden;
   color: var(--black);
   padding: var(--padding);
   border-radius: var(--border-radius-lg);
 	box-shadow: 5px 15px 58px rgba(0, 0, 0, 0.3);
 	-webkit-box-shadow: 5px 15px 58px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 5px 15px 58px rgba(0, 0, 0, 0.3);
+}
+
+.modal-card-header {
+  background-color: var(--blue);
+  padding: var(--padding);
+  margin: -30px;
+  margin-bottom: 0;
+  color: var(--white);
+}
+
+.modal-card-header.error {
+  background-color: var(--salmon);
+}
+
+.abcjs-inline-audio {
+  background-color: var(--white);
+  margin: var(--padding-sm);
+}
+
+.abcjs-inline-audio .abcjs-btn g {
+  fill: var(--salmon);
+  stroke: var(--salmon);
+  transition: fill var(--fast), stroke var(--fast);
+}
+
+.abcjs-inline-audio .abcjs-btn:hover g {
+  fill: var(--salmon-dark);
+  stroke: var(--salmon-dark);
+}
+
+.abcjs-inline-audio .abcjs-midi-clock {
+  color: var(--salmon);
+}
+
+.abcjs-inline-audio .abcjs-midi-progress-background {
+  background-color: var(--light-gray);
+  border-color: var(--light-gray);
+}
+
+.abcjs-inline-audio .abcjs-midi-progress-indicator {
+  background-color: var(--salmon);
+  height: 10px;
+  top: -2px;
 }
 
 @media screen and (min-width: 690px) {
