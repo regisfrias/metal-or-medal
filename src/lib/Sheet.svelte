@@ -123,10 +123,9 @@
   }
 
   .activate-audio {
-    padding: 0.25rem 0.75rem;
-    margin: 0.5rem auto;
-    border: 0;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footer {
@@ -134,7 +133,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: black;
-    color: white;
+    background-color: var(--white);
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
   }
 </style>

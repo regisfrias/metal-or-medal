@@ -40,11 +40,11 @@
   <div class="buttons">
     {#if !done}
       {#if currentSheet < sheets.length}
-        <button class="choice" on:click={() => submitAnswer('METAL')} disabled={didAnswer} aria-label="Vote for metal">🤘</button>
+        <button class="button--volume choice metal" on:click={() => submitAnswer('METAL')} disabled={didAnswer} aria-label="Vote for metal">🤘</button>
         <div class="score_wrapper">
           <p class="score">Your score: { score } / {sheets.length}</p>
         </div>
-        <button class="choice" on:click={() => submitAnswer('MEDAL')} disabled={didAnswer} aria-label="Vote for medal">🥇</button>
+        <button class="button--volume choice medal" on:click={() => submitAnswer('MEDAL')} disabled={didAnswer} aria-label="Vote for medal">🥇</button>
       {/if}
     {:else}
     <div></div>
@@ -80,7 +80,7 @@
 
 <style>
   .input {
-    border-top: 1px solid rgb(55, 55, 55);
+    border-top: 1px solid var(--light-gray);
     max-width: 600px;
     margin: auto;
   }
@@ -99,10 +99,17 @@
   }
 
   .input .buttons .choice {
-    font-size: 3rem;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
+    font-size: 2.5rem;
+    padding: calc(var(--padding-sm) / 3) var(--padding-sm);
+  }
+
+  .input .buttons .choice.metal {
+    background-color: var(--salmon);
+  }
+
+  .input .buttons .choice.medal {
+    background-color: var(--violet);
+    border-color: var(--violet-dark);
   }
 
   .feedback {
@@ -115,6 +122,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    color: var(--white);
     background-color: rgba(0, 0, 0, 0.9);
   }
 
@@ -125,5 +133,7 @@
 
   .score_wrapper {
     text-align: center;
+    display: flex;
+    align-items: center;
   }
 </style>
