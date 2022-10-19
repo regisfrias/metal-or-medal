@@ -120,7 +120,6 @@
 
   .feedback-btn {
     border: 0;
-    /* background-color: white; */
     padding: 0.5rem 2rem;
   }
 

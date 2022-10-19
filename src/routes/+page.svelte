@@ -20,7 +20,7 @@
     <p>Wondering what this is? Read the <a href="/faqe">Faqe</a>.</p>
 
     <p class="play">
-      <button on:click={goPlay}>Play ▶</button>
+      <button class="button--volume" on:click={goPlay}>Play ▶</button>
     </p>
   </div>
   {:else}
