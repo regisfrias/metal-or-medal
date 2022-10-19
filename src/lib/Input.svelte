@@ -102,16 +102,6 @@
     font-size: 2.5rem;
     padding: calc(var(--padding-sm) / 3) var(--padding-sm);
   }
-
-  .input .buttons .choice.metal {
-    background-color: var(--salmon);
-  }
-
-  .input .buttons .choice.medal {
-    background-color: var(--violet);
-    border-color: var(--violet-dark);
-  }
-
   .feedback {
     display: flex;
     justify-content: center;
