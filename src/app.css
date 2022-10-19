@@ -65,6 +65,16 @@ button {
   font-weight: bold;
   padding: var(--padding-sm) var(--padding);
   margin: var(--padding-sm) var(--padding);
+  transition: background-color var(--fast), color var(--fast);
+}
+
+button:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+button:active {
+  background-color: var(--blue-dark);
 }
 
 .button--volume {
