@@ -60,7 +60,12 @@
 {#if didAnswer}
 <div class="feedback">
   <div>
-    <p>{answerRight ? 'Very good!': 'You have been fooled!'}</p>
+    {#if answerRight}
+      <p class="success">Very good!</p>
+    {:else}
+      <p class="failure">You have been fooled!</p>
+    {/if}
+
     <p>This piece is:</p>
     <p>
       <strong>
@@ -78,6 +83,14 @@
     border-top: 1px solid rgb(55, 55, 55);
     max-width: 600px;
     margin: auto;
+  }
+
+  .success {
+    color: #60df60;
+  }
+
+  .failure {
+    color: #de4f4f;
   }
 
   .input .buttons {
@@ -107,7 +120,7 @@
 
   .feedback-btn {
     border: 0;
-    background-color: white;
+    /* background-color: white; */
     padding: 0.5rem 2rem;
   }
 

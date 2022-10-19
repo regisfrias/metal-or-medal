@@ -43,11 +43,11 @@ button {
   font-size: 1.2rem;
   cursor: pointer;
   text-transform: uppercase;
+  transition: background-color 0.25s, color 0.25s;
 }
 
 button:hover {
-  background-color: black;
-  color: white;
+  background-color: #cdedff;
 }
 
 @media screen and (min-width: 690px) {
