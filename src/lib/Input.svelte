@@ -58,12 +58,12 @@
 </div>
 
 {#if didAnswer}
-<div class="feedback">
-  <div>
+<div class="modal">
+  <div class="modal-card">
     {#if answerRight}
-      <p class="success">Very good!</p>
+      <p class="success text-lg">Very good!</p>
     {:else}
-      <p class="failure">You have been fooled!</p>
+      <p class="failure text-lg">You have been fooled!</p>
     {/if}
 
     <p>This piece is:</p>
@@ -72,7 +72,7 @@
         <a href="{sheets[currentSheet].link}" target="_blank" class="external_link">{ sheets[currentSheet].name }</a>
       </strong><br>by { sheets[currentSheet].composer }</p>
     <p>
-      <button class="feedback-btn" on:click={() => next()} disabled={!didAnswer} aria-label="Next">Next</button>
+      <button on:click={() => next()} disabled={!didAnswer} aria-label="Next">Next</button>
     </p>
   </div>
 </div>
@@ -101,24 +101,6 @@
   .input .buttons .choice {
     font-size: 2.5rem;
     padding: calc(var(--padding-sm) / 3) var(--padding-sm);
-  }
-  .feedback {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: var(--white);
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-
-  .feedback-btn {
-    border: 0;
-    padding: 0.5rem 2rem;
   }
 
   .score_wrapper {

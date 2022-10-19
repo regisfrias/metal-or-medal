@@ -134,7 +134,7 @@
     left: 0;
     right: 0;
     background-color: var(--white);
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
+    border-top-left-radius: var(--border-radius-lg);
+    border-top-right-radius: var(--border-radius-lg);
   }
 </style>

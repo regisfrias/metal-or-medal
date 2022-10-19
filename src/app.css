@@ -8,6 +8,8 @@
   --salmon-dark: #d14f56;
   --salmon-darker: #aa3c41;
   --light-gray: #f2eff8;
+  --border-radius-sm: 10px;
+  --border-radius-lg: 35px;
 }
 
 html, body {
@@ -36,6 +38,12 @@ a {
   flex-direction: column;
 }
 
+.text-lg {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 .external_link:after {
   content: "⤤";
   border-radius: 100%;
@@ -46,7 +54,7 @@ button {
   background-color: var(--white);
   color: var(--black);
   border: 1px solid var(--light-gray);
-  border-radius: 10px;
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -76,6 +84,29 @@ button {
 .button--volume:active {
   border-bottom: 0;
   border-top-width: 5px;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal-card {
+  background-color: var(--white);
+  color: var(--black);
+  padding: var(--padding);
+  border-radius: var(--border-radius-lg);
+	box-shadow: 5px 15px 58px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 5px 15px 58px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 5px 15px 58px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 690px) {
