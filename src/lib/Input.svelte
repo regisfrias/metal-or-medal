@@ -7,7 +7,7 @@
 
   let didAnswer = false;
   let answerRight = false;
-  let score = 0;
+  export let score = 0;
 	let icon = defaultFavicon;
 
   function submitAnswer(answer: string) {

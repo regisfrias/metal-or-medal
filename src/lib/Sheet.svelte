@@ -8,6 +8,7 @@
   import { tunes } from '../lib/tunes';
   import { shuffle } from '../lib/utils';
   let done = false;
+  let score = 0;
 
   let sheets = shuffle(tunes);
   let currentSheet = 0
@@ -97,6 +98,7 @@
 {:else}
   <div class="replay">
     <p class="">Game Over!</p>
+    <p>Your score: { score } / {sheets.length}</p>
     <button on:click={() => window.location.reload()}>Play again ↺</button>
   </div>
 {/if}
@@ -104,9 +106,8 @@
 <footer class="footer">
   <div id="audio" />
   <button class="activate-audio" on:click={enableAudio}>Activate Audio</button>
-  <Input bind:sheets={sheets} bind:currentSheet={currentSheet} bind:done={done} />
+  <Input bind:sheets={sheets} bind:currentSheet={currentSheet} bind:done={done} bind:score={score} />
 </footer>
-
 
 <style>
   #paper {
