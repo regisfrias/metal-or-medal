@@ -113,7 +113,8 @@
   #paper {
     margin: auto;
     text-align: center;
-    padding-bottom: 150px;
+    padding-top: var(--padding);
+    padding-bottom: 180px;
   }
 
   .replay {
@@ -136,5 +137,6 @@
     background-color: var(--white);
     border-top-left-radius: var(--border-radius-lg);
     border-top-right-radius: var(--border-radius-lg);
+    z-index: 2;
   }
 </style>
