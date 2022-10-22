@@ -12,6 +12,28 @@ export const tunes: Array<TuneType> = [
     composer: 'Igor Stravinsky',
     sheet: `
 X: 1
+T: Awe Song
+C: Some One Awe Some
+M: 2/4
+L: 1/8
+Q: "Lento" 1/2=50 "Tempo rubato"
+%%staves {(RH extra) (LH)}
+K: Eb
+V:RH clef=treble
+V:LH clef=bass
+[V: RH] !f! .[G,B,_DE].[G,B,_DE].[G,B,_DE].[G,B,_DE]|.[G,B,_DE].[G,B,_DE].[G,B,_DE].[G,B,_DE]|.[G,B,_DE].L[G,B,_DE].[G,B,_DE].L[G,B,_DE]|.[G,B,_DE].[G,B,_DE].[G,B,_DE].[G,B,_DE]|
+.[G,B,_DE].L[G,B,_DE].[G,B,_DE].[G,B,_DE]|.L[G,B,_DE].[G,B,_DE].[G,B,_DE].[G,B,_DE]|.L[G,B,_DE].[G,B,_DE].[G,B,_DE].[G,B,_DE]|.[G,B,_DE].L[G,B,_DE].[G,B,_DE].[G,B,_DE]|
+[V: LH]     .[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,]|.[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,]|.[_F,,A,,_C,_F,].L[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].L[_F,,A,,_C,_F,]|.[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,]|
+.[_F,,A,,_C,_F,].L[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,]|.L[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,]|.L[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,]|.[_F,,A,,_C,_F,].L[_F,,A,,_C,_F,].[_F,,A,,_C,_F,].[_F,,A,,_C,_F,]|
+    `,
+    rightAnswer: 'MEDAL',
+    link: 'https://open.spotify.com/track/3nOuH30XlAOYlOSPClArlH?si=f821584583334f40'
+  },
+  {
+    name: 'The Rite of Spring – Danse sacrale',
+    composer: 'Igor Stravinsky',
+    sheet: `
+X: 1
 T: You'll Never Guess
 C: John Doe
 %%staves {(RH extra) (LH)}
@@ -55,61 +77,7 @@ M: 3/16
 M: 2/8
   [^C])1/2[^C_E]1/2[=CD]1/2[CD]1/2|
 M: 3/16
-  [D,,D,]1/2[_e,,_b,,C]|
-    `,
-    rightAnswer: 'MEDAL',
-    link: 'https://open.spotify.com/track/3nOuH30XlAOYlOSPClArlH?si=f821584583334f40'
-  },
-  {
-    name: 'The Rite of Spring – Danse sacrale',
-    composer: 'Igor Stravinsky',
-    sheet: `
-X: 1
-T: Awe Song
-C: Some One Awe Some
-%%staves {(RH extra) (LH)}
-V:RH clef=treble
-V:LH clef=bass
-L: 1/8
-P: 142
-Q: 1/8=126
-[V: RH]
-M: 3/16
-  !f! z1/2 [^FADcd]1/2 Hz1/2|\
-M: 2/16
-  z1/2 [D^FAcd]1/2|\
-M: 3/16
-  z1/2 [D_E^FA(c(d]|\
-M: 2/8
-  [c)d)]1/2[G_Bce]1/2[F_AB^c]1/2[D^FA=c]1/2|
-[V: LH]
-M: 3/16
-  z1/2 [_e,,_b,,C]1/2 Hz1/2|\
-M: 2/16
-  [D,,D,]1/2[_e,,_b,,C]1/2|\
-M: 3/16
-  z1/2 ([^C]|\
-M: 2/8
-  [^C])1/2[^C_E]1/2[=CD]1/2[CD]1/2|
-[V: RH]
-M: 2/16
-  z1/2 [D^FAcd]1/2|\
-M: 3/16
-  z1/2 [D_E^FA(c(d]|\
-M: 2/8
-  [c)d)]1/2[G_Bce]1/2[F_AB^c]1/2[D^FA=c]1/2|\
-M: 3/16
-  z1/2 [D^FAcd]|
-[V: LH]
-M: 2/16
-  [D,,D,]1/2[_e,,_b,,C]1/2|\
-M: 3/16
-  z1/2 ([^C]|\
-M: 2/8
-  [^C])1/2[^C_E]1/2[=CD]1/2[CD]1/2|\
-M: 3/16
-  [D,,D,]1/2[_e,,_b,,C]|\
-    `,
+  [D,,D,]1/2[_e,,_b,,C]|    `,
     rightAnswer: 'MEDAL',
     link: 'https://open.spotify.com/track/0ivNJZGwjRiMFnhnRuN6vv?si=66a80a534f84458d&nd=1'
   },
