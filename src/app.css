@@ -67,6 +67,7 @@ button, .button {
   margin: var(--padding-sm) var(--padding);
   transition: background-color var(--fast), color var(--fast);
   text-decoration: none;
+  display: inline-block;
 }
 
 button:hover, .button:hover {
@@ -97,6 +98,7 @@ button:active, .button:active {
 }
 
 .button--volume:active {
+  background-color: var(--salmon-dark);
   border-bottom: 0;
   border-top-width: 5px;
 }

@@ -49,6 +49,5 @@
 
   footer {
     text-align: center;
-    padding: var(--padding-sm);
   }
 </style>
