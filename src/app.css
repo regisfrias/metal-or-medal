@@ -90,6 +90,9 @@ button:active, .button:active {
   color: var(--white);
   text-transform: uppercase;
   transition: background-color var(--fast), color var(--fast);
+  box-shadow: -1px 10px 42px -6px rgba(255,90,0,0.47);
+  -webkit-box-shadow: -1px 10px 42px -6px rgba(255,90,0,0.47);
+  -moz-box-shadow: -1px 10px 42px -6px rgba(255,90,0,0.47);
 }
 
 .button--volume:hover {
