@@ -24,7 +24,7 @@
   <dd><a href="https://regisfrias.com">Me</a></dd>
 
   <dt><dfn>Where's your cookie banner? Aren't you GDPR compliant?</dfn></dt>
-  <dd><a href="https://duckduckgo.com/?q=cookie+banner&t=brave&ia=web" class="external_link">The cookie banner</a> you see in way too many sites is a lame reaction to a <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation" class="external_link">good piece of legislation</a>. It just means that site wants to know way too much about you and now they are legally forced to be honest about it.</dd>
+  <dd><a href="https://duckduckgo.com/?q=cookie+banner&t=brave&ia=web" class="external_link">The cookie banner</a> you see in way too many sites is a lame reaction to a <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation" class="external_link">good piece of legislation</a>. It just means that site wants to know way too much about you and now they are legally forced to be honest about it. This site has no cookies, therefore no need for cookie banners.</dd>
 </dl>
 
 <footer class="footer">

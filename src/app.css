@@ -66,6 +66,7 @@ button, .button {
   padding: var(--padding-sm) var(--padding);
   margin: var(--padding-sm) var(--padding);
   transition: background-color var(--fast), color var(--fast);
+  text-decoration: none;
 }
 
 button:hover, .button:hover {
