@@ -128,15 +128,4 @@
     margin-left: auto;
     margin-right: auto;
   }
-
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--white);
-    border-top-left-radius: var(--border-radius-lg);
-    border-top-right-radius: var(--border-radius-lg);
-    z-index: 2;
-  }
 </style>

@@ -27,8 +27,10 @@
   <dd><a href="https://duckduckgo.com/?q=cookie+banner&t=brave&ia=web" class="external_link">The cookie banner</a> you see in way too many sites is a lame reaction to a <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation" class="external_link">good piece of legislation</a>. It just means that site wants to know way too much about you and now they are legally forced to be honest about it.</dd>
 </dl>
 
-<footer>
-  <a href="/">← Back to the game</a>
+<footer class="footer">
+  <p>
+    <a class="button button--volume" href="/">← Back to the game</a>
+  </p>
 </footer>
 
 <style>
@@ -46,17 +48,7 @@
   }
 
   footer {
-    border-top: 1px solid lightgray;
-    background-color: black;
-    padding: 10px 0;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  footer a {
-    color: white;
+    padding: var(--padding-sm);
   }
 </style>

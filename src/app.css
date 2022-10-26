@@ -54,7 +54,7 @@ a {
   margin-left: 0.25rem;
 }
 
-button {
+button, .button {
   background-color: var(--white);
   color: var(--black);
   border: 1px solid var(--light-gray);
@@ -68,12 +68,12 @@ button {
   transition: background-color var(--fast), color var(--fast);
 }
 
-button:hover {
+button:hover, .button:hover {
   background-color: var(--blue);
   color: var(--white);
 }
 
-button:active {
+button:active, .button:active {
   background-color: var(--blue-dark);
 }
 
@@ -167,6 +167,17 @@ button:active {
   background-color: var(--salmon);
   height: 10px;
   top: -2px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+  border-top-left-radius: var(--border-radius-lg);
+  border-top-right-radius: var(--border-radius-lg);
+  z-index: 2;
 }
 
 @media screen and (min-width: 690px) {
