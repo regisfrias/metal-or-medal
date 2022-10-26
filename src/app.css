@@ -95,13 +95,12 @@ button:active, .button:active {
   -moz-box-shadow: -1px 10px 42px -6px rgba(255,90,0,0.47);
 }
 
-.button--volume:hover {
+.button--volume:hover, .button--volume:active {
   background-color: var(--salmon-dark);
   border-color: var(--salmon-darker);
 }
 
 .button--volume:active {
-  background-color: var(--salmon-dark);
   border-bottom: 0;
   border-top-width: 5px;
 }
